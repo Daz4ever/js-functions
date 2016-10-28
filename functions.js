@@ -99,7 +99,17 @@ people.forEach(function good(name) {
 });
 console.log(goodJob);
 
+// 7) Given an array of strings such the array of names given in the previous problem,
+//  sort them by alphabetically order.
+console.log(people.sort());
 
+
+// 8) Sort the same array, but not by alphabetically order, but by how long each name is, shortest name first.
+
+var sortedNames = people.sort(function shortFirst(name1, name2) {
+  return name1.length - name2.length;
+});
+console.log(sortedNames);
 
 // Given this function:
 //
