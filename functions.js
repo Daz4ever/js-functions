@@ -26,7 +26,7 @@ myArray.forEach(function positives(number) {
   }
 });
 console.log(pos);
-// Write a function which takes an array of numbers as input and returns a new array
+// 2) Write a function which takes an array of numbers as input and returns a new array
 // containing only the even numbers in the given array.
 
 
@@ -36,6 +36,69 @@ var positives = myArray.filter(function positive(n) {
   return (n % 2 === 0);
 });
 console.log(even);
+
+// 3) Write a function which takes an array of numbers as input and returns a new array containing
+// result of squaring each of the numbers in the given array by two.
+//  Example: squareTheNumbers([1, 2, 3]) should give [1, 4, 9].
+
+var myArray = [1, 3, -3, 5, 4, 6, -7];
+
+var squared = myArray.map(function(n) {
+  return n * n;
+});
+console.log(squared);
+
+// 4) Write a function which takes an array of city objects like such:
+//
+var cities = [
+  { name: 'Los Angeles', temperature: 60.0},
+  { name: 'Atlanta', temperature: 52.0 },
+  { name: 'Detroit', temperature: 48.0 },
+  { name: 'New York', temperature: 80.0 }
+];
+// as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.
+
+var under70 = cities.filter(function cool(towns) {
+  return towns.temperature < 70.0;
+});
+console.log(under70);
+
+// 5) Write a function which takes an array of city objects like the above problem as input and returns an array of the cities names.
+
+var cityNames = cities.map(function cool(towns) {
+  return towns.name;
+});
+console.log(cityNames);
+
+// 6) Given an array of people's names:
+//
+// var people = [
+//   'Dom',
+//   'Lyn',
+//   'Kirk',
+//   'Autumn',
+//   'Trista',
+//   'Jesslyn',
+//   'Kevin',
+//   'John',
+//   'Eli',
+//   'Juan',
+//   'Robert',
+//   'Keyur',
+//   'Jason',
+//   'Che',
+//   'Ben'
+// ];
+// Print out 'Good Job, {{name}}!' for each person's name, one on a line.
+
+
+var goodJob = '';
+people.forEach(function good(name) {
+    var add = ('Good Job ' + name + '!\n');
+    goodJob += add;
+});
+console.log(goodJob);
+
 
 
 // Given this function:
