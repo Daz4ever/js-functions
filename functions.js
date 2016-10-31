@@ -58,8 +58,8 @@ var cities = [
 ];
 // as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.
 
-var under70 = cities.filter(function cool(towns) {
-  return towns.temperature < 70.0;
+var under70 = cities.filter(function cool(town) {
+  return town.temperature < 70.0;
 });
 console.log(under70);
 
@@ -111,7 +111,35 @@ var sortedNames = people.sort(function shortFirst(name1, name2) {
 });
 console.log(sortedNames);
 
-// Given this function:
+
+
+// 9)  Given an array of array of numbers like:
+//
+// var arr = [
+//   [1, 3, 4],
+//   [2, 4, 6, 8],
+//   [3, 6]
+// ];
+// Sort the array by the sum of each inner array. For the above example, the respective sums for each inner array is 8, 20, and 9. Therefore, the solution should be:
+//
+// [
+//   [1, 3, 4],
+//   [3, 6],
+//   [2, 4, 6, 8]
+// ]
+function sum(array) {
+  var mysum = array.reduce(function(a, b) {
+    return a + b;
+  }, 0);
+  return mysum;
+}
+
+var sortedArr = arr.sort(function compare(arr1, arr2) {
+  return sum(arr1) - sum(arr2);
+});
+
+
+// 10) Given this function:
 //
 // function call3Times(fun) {
 //   fun();
@@ -131,7 +159,7 @@ function call3Times(fun) {
 
 call3Times(hello);
 
-// You will write a function callNTimes that takes two arguments: times as a number, and fun as a function. It will call that function for that many times.
+// 11) You will write a function callNTimes that takes two arguments: times as a number, and fun as a function. It will call that function for that many times.
 
 function hello() {
   console.log('Hello There!');
@@ -145,3 +173,32 @@ function callNTimes(times, func) {
 }
 
 callNTimes(5, hello);
+
+
+// 12) Write a function sum that takes an array of numbers as argument and returns the sum of those numbers. Use the reduce method to do this.
+//
+// > sum([1, 2, 3])
+// 6
+
+function doSomething(a, b) {
+  return a + b;
+}
+var start = 0;
+
+var sum = function(arr) {
+  return arr.reduce.(doSomething, start);
+};
+
+
+console.log(sum([1, 2, 3]));
+
+
+// var example = function(){
+//   // do some stuff
+//   return arr.reduce(someFunction, 0);
+// }();
+//
+// console.log(example);
+//
+// example([2,3,4]);
+// example([5,6,7]);
