@@ -1,23 +1,23 @@
 ![Alt text](maxresdefault.jpg)
 
 
-Function Exercises
+# Function Exercises
 
 Implement all of the following problems without using a while or a for loop unless you were explicitly asked to use loops.
 
-Positive Numbers
+### Positive Numbers
 
 Write a function which takes an array of numbers as input and returns a new array containing only the positive numbers in the given array.
 
-Even Numbers
+### Even Numbers
 
 Write a function which takes an array of numbers as input and returns a new array containing only the even numbers in the given array.
 
-Square the Numbers
+### Square the Numbers
 
 Write a function which takes an array of numbers as input and returns a new array containing result of squaring each of the numbers in the given array by two. Example: squareTheNumbers([1, 2, 3]) should give [1, 4, 9].
 
-Cities 1
+### Cities 1
 
 Write a function which takes an array of city objects like such:
 
@@ -29,11 +29,11 @@ var cities = [
 ];
 as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.
 
-Cities 2
+### Cities 2
 
 Write a function which takes an array of city objects like the above problem as input and returns an array of the cities names.
 
-Good Job!
+### Good Job!
 
 Given an array of people's names:
 
@@ -56,15 +56,15 @@ var people = [
 ];
 Print out 'Good Job, {{name}}!' for each person's name, one on a line.
 
-Sort an array
+### Sort an array
 
 Given an array of strings such the array of names given in the previous problem, sort them by alphabetically order.
 
-Sort an array, 2
+### Sort an array, 2
 
 Sort the same array, but not by alphabetically order, but by how long each name is, shortest name first.
 
-Sort an array, 3
+### Sort an array, 3
 
 Given an array of array of numbers like:
 
@@ -80,7 +80,7 @@ Sort the array by the sum of each inner array. For the above example, the respec
   [3, 6],
   [2, 4, 6, 8]
 ]
-3 times
+### 3 times
 
 Given this function:
 
@@ -91,7 +91,7 @@ function call3Times(fun) {
 }
 Use the call3Times function to print "Hello, world!" 3 times.
 
-n times
+### n times
 
 You will write a function callNTimes that takes two arguments: times as a number, and fun as a function. It will call that function for that many times. Example:
 
@@ -103,13 +103,13 @@ Hello, world!
 Hello, world!
 You are allowed to use a loop in the implementation of callNTimes.
 
-Sum an array
+### Sum an array
 
 Write a function sum that takes an array of numbers as argument and returns the sum of those numbers. Use the reduce method to do this.
 
 > sum([1, 2, 3])
 6
-Acronym
+### Acronym
 
 Write a function acronym that takes an array of words as argument and returns the acronym of the words. Use the reduce method to do this.
 
@@ -117,7 +117,8 @@ Write a function acronym that takes an array of words as argument and returns th
 'VIP'
 > acronym(['national', 'aeronautics', 'space', 'administration'])
 'NASA'
-Bonus: forEach
+
+### Bonus: forEach
 
 Implement a forEach function which takes two arguments: an array arr and a function fun. It will call fun passing each item in arr to fun as the first argument. Example:
 
@@ -135,14 +136,14 @@ Hello, Alice!
 Hello, Joe!
 You can use a loop in the implementation of this function.
 
-Bonus: map
+### Bonus: map
 
 Implement a map function which takes two arguments: an array arr and a function fun. It will return a new array, with each of its results being the result of calling fun with argument
 
 
-Closure Exercises
+# Closure Exercises
 
-Counter
+### Counter
 
 Make a counter function that returns a function that returns a successive number each time it is called.
 
@@ -158,7 +159,8 @@ Make a counter function that returns a function that returns a successive number
 2
 > count1()
 3
-Counter 2
+
+### Counter 2
 
 Allow the caller of counter to initialize the count to the first argument that's passed in.
 
@@ -167,7 +169,8 @@ Allow the caller of counter to initialize the count to the first argument that's
 5
 > count1()
 6
-Battleship
+
+### Battleship
 
 The following code implements a battleship board. The fire function takes a row and col and returns 'Hit!' or 'miss' depending on if it hit a part of the ship. The problem is we don't want the enemy to see our board! So we need to hide the board variable within a closure, but still expose the fire function to the outside. Use the module pattern to do this.
 
