@@ -210,4 +210,32 @@ console.log(sum([1, 2, 3]));
 // 'VIP'
 // > acronym(['national', 'aeronautics', 'space', 'administration'])
 // 'NASA'
-// Bonus: forEach
+
+ var vip =['very', 'important', 'person'];
+
+var add = function(total, word) {
+  return total + word[0];
+};
+var empty = "";
+function acronym(arr) {
+  return arr.reduce(add, empty).toUpperCase();
+}
+
+console.log(acronym(vip));
+
+
+// 14) Implement a forEach function which takes two arguments: an array arr and a function fun. It will call fun passing each item in arr to fun as the first argument. Example:
+//
+// var arr = [
+//   { name: 'Bob' },
+//   { name:'Alice' },
+//   { name:'Joe' }];
+// forEach(arr, function(person) {
+//   console.log('Hello, ' + person.name + '!');
+// });
+// The above program will print:
+//
+// Hello, Bob!
+// Hello, Alice!
+// Hello, Joe!
+// You can use a loop in the implementation of this function.
