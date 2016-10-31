@@ -239,3 +239,40 @@ console.log(acronym(vip));
 // Hello, Alice!
 // Hello, Joe!
 // You can use a loop in the implementation of this function.
+
+var arr = [
+  { name: 'Bob' },
+  { name:'Alice' },
+  { name:'Joe' }];
+
+
+function hello(person) {
+  console.log('Hello, ' + person.name + '!');
+}
+function forEach(array, func) {
+  for(var i =0; i < array.length; i++) {
+    func(array[i]);
+  }
+
+}
+
+forEach(arr, hello);
+
+// 15) Implement a map function which takes two arguments: an array arr and a function fun. It will return a new array, with each of its results being the result of calling fun with argument
+
+var arr = [1, 3, 5];
+
+function fun(number) {
+  return number * 5;
+}
+var times5 = [];
+function map(array, func) {
+  for(var i =0; i < array.length; i++) {
+    times5.push(func(array[i]));
+  }
+  return times5;
+
+}
+
+
+console.log(map(arr, fun));
